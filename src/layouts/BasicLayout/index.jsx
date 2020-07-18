@@ -22,6 +22,7 @@ import Header from '@/layouts/Header';
 import Footer from '@/layouts/Footer';
 import PageLoading from '@/layouts/PageLoading';
 
+import TableList from '@/pages/demo/list/table-list';
 
 const { Content } = Layout;
 
@@ -125,7 +126,7 @@ const genLayoutStyle = {
     // paddingLeft: siderMenuDom
     //   ? paddingLeft  // getPaddingLeft(!!hasLeftPadding, collapsed, siderWidth)
     //   : undefined,
-    paddingLeft: 80,
+    // paddingLeft: 80,
     position: 'relative',
 };
 
@@ -219,8 +220,8 @@ const BasicLayout = props => {
                     >
                         {loading ? <PageLoading /> : children}
                     </WrapContent> */}
-                    <Content>
-                    <ConfigProvider
+                    <Content className="ant-pro-basicLayout-content ant-pro-basicLayout-has-header">
+                        <ConfigProvider
                             getPopupContainer={() => {
                                 // if (isChildrenLayout && this.ref) {
                                 //     return this.ref;
@@ -234,6 +235,7 @@ const BasicLayout = props => {
                                 // }}
                                 className="ant-pro-basicLayout-children-content-wrap"
                             >
+                                <Route path='/list/table-list' component={TableList}></Route>
                                 {children}
                             </div>
                         </ConfigProvider>

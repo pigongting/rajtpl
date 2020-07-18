@@ -5,6 +5,8 @@ import {
     GithubOutlined
 } from '@ant-design/icons';
 
+import './index.less';
+
 const FooterWrapper = (props) => {
 
     const {

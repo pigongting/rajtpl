@@ -81,6 +81,11 @@ const SiderMenuWrapper = (props) => {
                         <Menu.Item key="12">Option 12</Menu.Item>
                     </SubMenu>
                 </SubMenu>
+                <SubMenu key="demo" icon={<AppstoreOutlined />} title="示例">
+                    <SubMenu key="list" title="列表页">
+                        <Menu.Item key="table-list"><Link to="/list/table-list">查询表格</Link></Menu.Item>
+                    </SubMenu>
+                </SubMenu>
             </Menu>
         </Sider >
 

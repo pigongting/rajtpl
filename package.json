@@ -8,8 +8,8 @@
     "test": "node scripts/test.js"
   },
   "dependencies": {
-    "antd": "^4.4.1",    
-    "react": "^16.13.1",    
+    "antd": "^4.4.1",
+    "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "use-merge-value": "^1.0.2"
@@ -73,7 +73,6 @@
     "webpack-manifest-plugin": "2.2.0",
     "workbox-webpack-plugin": "4.3.1"
   },
-  
   "eslintConfig": {
     "extends": "react-app"
   },

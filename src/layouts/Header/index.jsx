@@ -56,7 +56,7 @@ const HeaderWrapper = (props) => {
                 // width: needSettingWidth
                 //     ? `calc(100% - ${collapsed ? 80 : siderWidth}px)`
                 //     : '100%',
-                width: `calc(100% - ${collapsed ? 80 : siderWidth}px)`,
+                width: '100%',
                 zIndex: 9,
                 right: undefined,
                 // ...style,
@@ -66,7 +66,7 @@ const HeaderWrapper = (props) => {
 
             {/* GlobalHeader */}
             {/* <div className={className} style={style}> */}
-            <div className={className} >
+            <div className="ant-pro-global-header ant-pro-global-header-layout-side" >
                 {/* {isMobile && renderLogo(menuHeaderRender, logoDom)} */}
                 {/* {this.renderCollapsedButton()} */}
                 {/* <span className="ant-pro-global-header-trigger" onClick={this.toggle}> */}
