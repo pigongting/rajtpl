@@ -81,9 +81,9 @@ const SiderMenuWrapper = (props) => {
                         <Menu.Item key="12">Option 12</Menu.Item>
                     </SubMenu>
                 </SubMenu>
-                <SubMenu key="demo" icon={<AppstoreOutlined />} title="Ê¾Àý">
-                    <SubMenu key="list" title="ÁÐ±íÒ³">
-                        <Menu.Item key="table-list"><Link to="/list/table-list">²éÑ¯±í¸ñ</Link></Menu.Item>
+                <SubMenu key="demo" icon={<AppstoreOutlined />} title="ç¤ºä¾‹">
+                    <SubMenu key="list" title="åˆ—è¡¨é¡µ">
+                        <Menu.Item key="table-list"><Link to="/list/table-list">æŸ¥è¯¢è¡¨æ ¼</Link></Menu.Item>
                     </SubMenu>
                 </SubMenu>
             </Menu>
