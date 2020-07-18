@@ -140,6 +140,8 @@ const BasicLayout = props => {
         location = { pathname: '/' }
     } = props;
 
+    const [collapsed, setCollapsed] = useState(false);
+
     useEffect(() => {
         if (dispatch) {
             dispatch({
@@ -205,12 +207,12 @@ const BasicLayout = props => {
                 hasSider
             >
 
-                <SiderMenu />
+                <SiderMenu collapsed={collapsed} />
                 
 
                 <Layout style={genLayoutStyle}>
 
-                    <Header />
+                    <Header onCollapsed={setCollapsed} collapsed={collapsed} />
 
                     {/* <WrapContent
                         className={contentClassName}

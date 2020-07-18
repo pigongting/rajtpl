@@ -54,7 +54,7 @@ const SiderMenuWrapper = (props) => {
                 defaultOpenKeys={['sub1']}
                 mode="inline"
                 theme="dark"
-            // inlineCollapsed={props.collapsed}
+                inlineCollapsed={props.collapsed}
             >
                 <Menu.Item key="1" icon={<PieChartOutlined />}>
                     <Link to="/">Home</Link>

@@ -1,5 +1,5 @@
 
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState, useCallback } from 'react';
 
 import classNames from 'classnames';
 // https://github.com/react-component/resize-observer
@@ -37,8 +37,12 @@ const HeaderWrapper = (props) => {
         className: propsClassName,
         collapsed,
         siderWidth = 256,
-
+        onCollapsed,
     } = props;
+
+    const onClick = useCallback(() => {
+        onCollapsed(true);
+    });
 
     const [rightSize, setRightSize] = useState('auto');
 
@@ -70,7 +74,7 @@ const HeaderWrapper = (props) => {
                 {/* {isMobile && renderLogo(menuHeaderRender, logoDom)} */}
                 {/* {this.renderCollapsedButton()} */}
                 {/* <span className="ant-pro-global-header-trigger" onClick={this.toggle}> */}
-                <span className="ant-pro-global-header-trigger">
+                <span className="ant-pro-global-header-trigger" onClick={onClick}>
                     {/* {collapsedButtonRender(collapsed)} */}
                     { collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined /> }
                 </span>
