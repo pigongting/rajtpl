@@ -85,6 +85,9 @@ const SiderMenuWrapper = (props) => {
                     <SubMenu key="list" title="列表页">
                         <Menu.Item key="table-list"><Link to="/list/table-list">查询表格</Link></Menu.Item>
                     </SubMenu>
+                    <SubMenu key="form" title="表单页">
+                        <Menu.Item key="advanced-form"><Link to="/form/advanced-form">高级表单</Link></Menu.Item>
+                    </SubMenu>
                 </SubMenu>
             </Menu>
         </Sider >

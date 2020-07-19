@@ -23,6 +23,7 @@ import Footer from '@/layouts/Footer';
 import PageLoading from '@/layouts/PageLoading';
 
 import TableList from '@/pages/demo/list/table-list';
+import AdvancedForm from '@/pages/demo/form/advanced-form';
 
 const { Content } = Layout;
 
@@ -238,6 +239,7 @@ const BasicLayout = props => {
                                 className="ant-pro-basicLayout-children-content-wrap"
                             >
                                 <Route path='/list/table-list' component={TableList}></Route>
+                                <Route path='/form/advanced-form' component={AdvancedForm}></Route>
                                 {children}
                             </div>
                         </ConfigProvider>
