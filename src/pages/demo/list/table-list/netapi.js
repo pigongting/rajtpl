@@ -6,63 +6,40 @@ export async function rConfigList() {
   console.log('rConfigList --------------------------------->');
 
   return {
-    title: '企业管理',
-    code: '/enterprise/list',
-    api: {
-      rConfig: '',
-      rPagination: '',
-      rReverse: '',
-      rGetAll: '',
-      rPost: '',
-      rGet: '',
-      rPut: '',
-      rDelete: '',
-    },
+    title: '规则管理',
+    code: '/rule/list',
     form: [
       {
         type: 'FormInput',
         filed: 'name',
-        label: '企业名称',
+        label: '规则名称',
       },
       {
         type: 'FormInput',
         filed: 'code',
-        label: '企业编码',
+        label: '使用状态',
       }
     ],
     table: [
       {
-        type: 'TableLink',
-        title: '企业名称',
+        title: '规则名称',
         dataIndex: 'name',
       },
       {
-        title: '企业编码',
-        dataIndex: 'code',
+        title: '描述',
+        dataIndex: 'desc',
       },
       {
-        title: '企业简称',
-        dataIndex: 'shortName',
+        title: '服务调用次数',
+        dataIndex: 'callNo',
       },
       {
-        title: '所属行业',
-        dataIndex: 'industry',
+        title: '状态',
+        dataIndex: 'status',
       },
       {
-        title: '联系人',
-        dataIndex: 'contacts',
-      },
-      {
-        title: '联系电话',
-        dataIndex: 'contactNumber',
-      },
-      {
-        title: '主管理员',
-        dataIndex: 'mainManager',
-      },
-      {
-        title: '所属区域',
-        dataIndex: 'region',
+        title: '上次调度时间',
+        dataIndex: 'metaUpdated',
       },
     ]
   };
@@ -73,6 +50,7 @@ export async function rConfigList() {
 // 分页
 export async function rPagination(params) {
   console.log('rPagination --------------------------------->');
-  return await request.get('https://my-json-server.typicode.com/pigongting/json-server/posts/1');
+  const res = await request.get('https://my-json-server.typicode.com/pigongting/json-server/rules');
+  return res.data;
 }
 // ====================================================

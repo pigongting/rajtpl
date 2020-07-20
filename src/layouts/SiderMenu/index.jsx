@@ -44,14 +44,14 @@ const SiderMenuWrapper = (props) => {
                 <Link to="/">
                     <img src={logo} alt="logo" />
                     {/* {props.collapsed ? null : <h1>{props.title}</h1>} */}
-                    {props.collapsed ? null : <h1>edexcs</h1>}
+                    {props.collapsed ? null : <h1>title</h1>}
                 </Link>
             </div>
 
 
             <Menu
-                defaultSelectedKeys={['1']}
-                defaultOpenKeys={['sub1']}
+                defaultSelectedKeys={['table-list']}
+                defaultOpenKeys={['demo', 'list']}
                 mode="inline"
                 theme="dark"
                 inlineCollapsed={props.collapsed}

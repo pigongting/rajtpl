@@ -1,6 +1,6 @@
 /* 开源-组件 */
 import React, { useEffect, useCallback } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { useRequest } from 'ahooks';
@@ -13,9 +13,6 @@ import ListActionsLayout from '@/layouts/ListLayout/actions.js';
 import { rConfigList, rPagination } from './netapi';
 
 export default () => {
-  // useHistory
-  const history = useHistory();
-
   // useRequest
   const { data: config = {} } = useRequest(rConfigList);
   const { data: mainData, loading, run } = useRequest(rPagination, { manual: true }); 
@@ -30,8 +27,6 @@ export default () => {
     reload();
   }, [reload]);
 
-  console.log(history);
-
   // 操作
   const actions = {
     title: '操作',
@@ -39,8 +34,8 @@ export default () => {
     render: (text, record) => (
       <ListActionsLayout
         actions={[
-          <Link key="view" to={'/enterprise/view?id=' + record.id}>详情</Link>,
-          <Link key="delete" to={'/enterprise/view?id=' + record.id}>删除企业</Link>
+          <Link key="view" to={'/'}>配置</Link>,
+          <Link key="delete" to={'/'}>订阅警报</Link>
         ]}
       />
     )
