@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "name": "@huse/core",
+  "version": "0.8.0",
+  "main": "index.js",
+  "repository": "git@github.com:ecomfe/react-hooks.git",
+  "author": "otakustay <otakustay@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "generate": "node scripts/generate",
+    "lint": "lerna run lint && skr lint scripts",
+    "test": "lerna run test --concurrency 1",
+    "build": "lerna run build",
+    "build-check": "lerna run build-check",
+    "release": "lerna version --conventional-commits --no-push",
+    "ci": "yarn && yarn lint && yarn build-check && yarn test",
+    "preversion": "yarn ci",
+    "prepack": "yarn && yarn build",
+    "doc:dev": "cd packages/doc && docz dev"
+  },
+  "devDependencies": {
+    "fs-extra": "^8.1.0",
+    "immer": "^6.0.1",
+    "inquirer": "^7.0.6",
+    "lerna": "^3.20.2",
+    "sort-package-json": "^1.40.0"
+  }
+}
