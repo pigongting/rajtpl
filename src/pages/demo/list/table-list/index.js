@@ -1,5 +1,5 @@
 /* 开源-组件 */
-import React, { useEffect, useCallback } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
@@ -15,17 +15,7 @@ import { rConfigList, rPagination } from './netapi';
 export default () => {
   // useRequest
   const { data: config = {} } = useRequest(rConfigList);
-  const { data: mainData, loading, run } = useRequest(rPagination, { manual: true }); 
-
-  // reload
-  const reload = useCallback((params) => {
-    run(params);
-  }, [run]);
-
-  // useEffect
-  useEffect(() => {
-    reload();
-  }, [reload]);
+  const { data: mainData, loading, run } = useRequest(rPagination);
 
   // 操作
   const actions = {
@@ -43,8 +33,8 @@ export default () => {
 
   return (
     <ListLayout title={config.title}>
-      <ListFormLayout fileds={config.form} reload={reload} />
-      <ListTableLayout fileds={[ ...(config.table || []), actions ]} data={mainData} loading={loading} reload={reload}>
+      <ListFormLayout fileds={config.form} reload={run} />
+      <ListTableLayout fileds={[ ...(config.table || []), actions ]} data={mainData} loading={loading} reload={run}>
         <Link to={'/'}><Button type="primary" icon={<PlusOutlined />}>新建</Button></Link>
       </ListTableLayout>
     </ListLayout>

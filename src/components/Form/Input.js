@@ -1,8 +1,8 @@
 /* 开源-组件 */
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Input } from 'antd';
 
-export default (props) => {
+export default forwardRef((props, ref) => {
   const { label, value, placeholder } = props;
 
   const triggerChange = changedValue => {
@@ -17,4 +17,4 @@ export default (props) => {
   return (
     <Input placeholder={placeholder || '请输入'} addonBefore={label} value={value} onChange={handleChange}/>
   );
-}
+});

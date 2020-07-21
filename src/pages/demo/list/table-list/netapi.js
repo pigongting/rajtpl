@@ -50,6 +50,7 @@ export async function rConfigList() {
 // 分页
 export async function rPagination(params) {
   console.log('rPagination --------------------------------->');
+  console.log(params);
   const res = await request.get('https://my-json-server.typicode.com/pigongting/json-server/rules');
   return res.data;
 }
