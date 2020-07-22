@@ -1,4 +1,6 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, 
+    // useEffect, useState 
+} from 'react';
 
 import {
     CopyrightOutlined,
@@ -8,11 +10,11 @@ import {
 import './index.less';
 
 const FooterWrapper = (props) => {
-
+    /*
     const {
 
     } = props;
-
+    */
     const links = [
         {
             key: 'Ant Design Pro',

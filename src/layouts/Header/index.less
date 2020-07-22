@@ -1,14 +1,56 @@
 @import '~antd/es/style/themes/default.less';
 
-.ant-pro-global-header {
-  position: relative;
+.antd-pro-components-global-header-index-right {
   display: flex;
-  align-items: center;
-  height: 48px;
   padding: 0 16px;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+
+  .antd-pro-components-global-header-index-action {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background: rgba(0,0,0,.025);
+    }
+
+    > span {
+      vertical-align: middle;
+    }
+  }
+
+  .antd-pro-components-global-header-index-account {
+
+    .antd-pro-components-global-header-index-avatar {
+      margin: 0px 8px 0px 0;
+      color: #1890ff;
+      vertical-align: top;
+      background: hsla(0,0%,100%,.85);
+    }
+  }
 }
+
+.antd-pro-components-global-header-index-menu {
+
+  .ant-dropdown-menu-item {
+    min-width: 160px;
+  }
+  .anticon {
+    margin-right: 8px;
+  }
+}
+
+.antd-pro-components-notice-icon-index-badge {
+  font-size: 16px;
+}
+
+.antd-pro-components-notice-icon-index-icon {
+  padding: 4px;
+  vertical-align: middle;
+}
+
 
 @pro-layout-global-header-prefix-cls: ~'@{ant-prefix}-pro-global-header';
 
@@ -57,7 +99,7 @@
     cursor: pointer;
     transition: all 0.3s, padding 0s;
     &:hover {
-      background: @pro-layout-header-hover-bg;
+      background: rgba(0,0,0,.025);
     }
   }
 

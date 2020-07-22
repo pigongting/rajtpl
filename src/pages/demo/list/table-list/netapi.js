@@ -7,7 +7,7 @@ export async function rConfigList() {
 
   return {
     title: '规则管理',
-    code: '/rule/list',
+    code: '/list/table-list',
     form: [
       {
         type: 'FormInput',

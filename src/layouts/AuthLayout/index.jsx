@@ -1,13 +1,17 @@
-import React, { Fragment, useEffect, useContext } from 'react';
+import React, { 
+    // Fragment, 
+    useEffect, 
+    // useContext 
+} from 'react';
 
 
 const AuthLayout = props => {
 
     const {
         dispatch,
-        children,
-        settings,
-        location = { pathname: '/' },
+        // children,
+        // settings,
+        // location = { pathname: '/' },
     } = props;
 
     useEffect(() => {
@@ -16,8 +20,8 @@ const AuthLayout = props => {
                 type: 'user/fetchCurrent',
             });
         }
-    }, []);
-
+    }, [dispatch]);
+    /*
     const handleMenuCollapse = payload => {
         if (dispatch) {
             dispatch({
@@ -26,6 +30,7 @@ const AuthLayout = props => {
             });
         }
     };
+    */
 
     return (
         <>

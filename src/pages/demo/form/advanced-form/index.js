@@ -1,29 +1,17 @@
-import React, { useState, useEffect } from 'react';
-
-const wait = new Promise((resolve, reject) => {
-  const timer = setTimeout(resolve, 1000);
-  clearTimeout(timer);
-});
+/* 开源-组件 */
+import React from 'react';
+import { useRequest } from 'ahooks';
+/* 自研-组件 */
+import FormLayout from '@/layouts/FormLayout';
+/* 自研-请求 */
+import { rConfigNew, rPost } from './netapi';
 
 export default (props) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    console.log('useEffect start');
-
-    return () => {
-      console.log('useEffect end');
-    };
-  });
-
-  console.log('rerender');
+  // useRequest
+  const { data: config = {} } = useRequest(rConfigNew);
+  const { loading, run } = useRequest(rPost, { manual: true });
 
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(0)}>
-        Click me
-      </button>
-    </div>
-  );
+    <FormLayout router={props} title={config.title} fileds={config.form} loading={loading} handleSubmit={run}></FormLayout>
+  )
 }

@@ -12,7 +12,7 @@ import ListActionsLayout from '@/layouts/ListLayout/actions.js';
 /* 自研-请求 */
 import { rConfigList, rPagination } from './netapi';
 
-export default () => {
+export default (props) => {
   // useRequest
   const { data: config = {} } = useRequest(rConfigList);
   const { data: mainData, loading, run } = useRequest(rPagination);
@@ -32,7 +32,7 @@ export default () => {
   };
 
   return (
-    <ListLayout title={config.title}>
+    <ListLayout router={props} title={config.title}>
       <ListFormLayout fileds={config.form} reload={run} />
       <ListTableLayout fileds={[ ...(config.table || []), actions ]} data={mainData} loading={loading} reload={run}>
         <Link to={'/'}><Button type="primary" icon={<PlusOutlined />}>新建</Button></Link>

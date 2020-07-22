@@ -1,17 +1,21 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { 
+    // Fragment, 
+    useEffect, useState } from 'react';
 
 import {
-    BrowserRouter as Router,
-    Switch,
+    // BrowserRouter as Router,
+    // Switch,
     Route,
-    Link
+    // Link
 } from "react-router-dom";
 
 import classNames from 'classnames';
 
-import { ConfigProvider, Layout, Menu } from 'antd';
-import { Button, DatePicker } from 'antd';
-import { Tooltip, Avatar, Tag, Spin } from 'antd';
+import { ConfigProvider, Layout, 
+    // Menu 
+} from 'antd';
+// import { Button, DatePicker } from 'antd';
+// import { Tooltip, Avatar, Tag, Spin } from 'antd';
 
 import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './index.less';
@@ -20,7 +24,7 @@ import './index.less';
 import SiderMenu from '@/layouts/SiderMenu';
 import Header from '@/layouts/Header';
 import Footer from '@/layouts/Footer';
-import PageLoading from '@/layouts/PageLoading';
+// import PageLoading from '@/layouts/PageLoading';
 
 import TableList from '@/pages/demo/list/table-list';
 import AdvancedForm from '@/pages/demo/form/advanced-form';
@@ -28,7 +32,7 @@ import AdvancedForm from '@/pages/demo/form/advanced-form';
 const { Content } = Layout;
 
 
-
+/*
 const routes = [
     {
         path: "/",
@@ -121,7 +125,7 @@ function Bus() {
 function Cart() {
     return <h3>Cart</h3>;
 }
-
+*/
 
 const genLayoutStyle = {
     // paddingLeft: siderMenuDom
@@ -137,8 +141,8 @@ const BasicLayout = props => {
     const {
         dispatch,
         children,
-        settings,
-        location = { pathname: '/' }
+        // settings,
+        // location = { pathname: '/' }
     } = props;
 
     const [collapsed, setCollapsed] = useState(false);
@@ -149,8 +153,8 @@ const BasicLayout = props => {
                 type: 'user/fetchCurrent',
             });
         }
-    }, []);
-
+    }, [dispatch]);
+    /*
     const handleMenuCollapse = payload => {
         if (dispatch) {
             dispatch({
@@ -159,7 +163,7 @@ const BasicLayout = props => {
             });
         }
     };
-
+    */
     
 
     

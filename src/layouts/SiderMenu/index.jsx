@@ -1,15 +1,17 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { 
+    // Fragment, useEffect, useState 
+} from 'react';
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
+    // BrowserRouter as Router,
+    // Switch,
+    // Route,
     Link
 } from "react-router-dom";
 
 import {
     AppstoreOutlined,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
+    // MenuUnfoldOutlined,
+    // MenuFoldOutlined,
     PieChartOutlined,
     DesktopOutlined,
     ContainerOutlined,
@@ -26,7 +28,7 @@ const { SubMenu } = Menu;
 
 
 
-{/* /layouts/BasicLayout.jsx -> /layouts/SiderMenu/index.jsx -> /layouts/SiderMenu/SiderMenu.jsx -> BaseMenu.jsx */}
+// {/* /layouts/BasicLayout.jsx -> /layouts/SiderMenu/index.jsx -> /layouts/SiderMenu/SiderMenu.jsx -> BaseMenu.jsx */}
 const SiderMenuWrapper = (props) => {
 
     const {
@@ -35,7 +37,7 @@ const SiderMenuWrapper = (props) => {
 
     return (
 
-        < Sider >
+        < Sider collapsed={props.collapsed}>
             <div
                 className="ant-pro-sider-menu-logo"
                 onClick={onMenuHeaderClick}
@@ -54,7 +56,7 @@ const SiderMenuWrapper = (props) => {
                 defaultOpenKeys={['demo', 'list']}
                 mode="inline"
                 theme="dark"
-                inlineCollapsed={props.collapsed}
+                // inlineCollapsed={props.collapsed}
             >
                 <Menu.Item key="1" icon={<PieChartOutlined />}>
                     <Link to="/">Home</Link>
@@ -99,6 +101,6 @@ const SiderMenuWrapper = (props) => {
 export default SiderMenuWrapper;
 
 
-{/* <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
-        {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
-        </Button> */}
+// {/* <Button type="primary" onClick={this.toggleCollapsed} style={{ marginBottom: 16 }}>
+//         {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
+//         </Button> */}
