@@ -10608,10 +10608,10 @@ immer@1.10.0:
   resolved "https://registry.npm.taobao.org/immer/download/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
   integrity sha1-utZ2BbqcgQJ12R4cKkfUWC6YKG0=
 
-immer@^6.0.1:
-  version "6.0.3"
-  resolved "https://registry.npm.taobao.org/immer/download/immer-6.0.3.tgz#94d5051cd724668160a900d66d85ec02816f29bd"
-  integrity sha1-lNUFHNckZoFgqQDWbYXsAoFvKb0=
+immer@^9.0.6:
+  version "9.0.6"
+  resolved "https://registry.nlark.com/immer/download/immer-9.0.6.tgz#7a96bf2674d06c8143e327cbf73539388ddf1a73"
+  integrity sha1-epa/JnTQbIFD4yfL9zU5OI3fGnM=
 
 import-cwd@^2.0.0:
   version "2.1.0"
